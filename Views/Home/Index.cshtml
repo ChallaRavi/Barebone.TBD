@@ -1,0 +1,29 @@
+﻿@using System.Collections.Generic
+@using Barebone.TBD.Helpers
+@using Barebone.TBD.Models
+@using Contentful.Core.Images
+
+
+
+        
+<div class="col-md-6">
+
+
+    @*@foreach (var d in Model)
+        {
+            @d.GetSimpleRichTextContent();
+            @d.TestContent()
+            @d.SupportPageTitle
+            @d.GetText
+            @d.LongFeild
+
+        }*@
+
+    @foreach (var d in Model)
+    {
+        @Html.Raw(@d.GetText)
+            }
+
+
+</div>
+        
