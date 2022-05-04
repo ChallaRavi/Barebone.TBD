@@ -51,7 +51,7 @@ namespace Barebone.TBD.Controllers
             //    //SpaceId = "666",
             //    //UsePreviewApi = false
             //});
-            //_contentfulManagementClient = new ContentfulManagementClient(httpClient, "CFPAT-fsK4ko_u6u3wwFf3VVMppzeCn0lcIGPijeslqfoIa8I", "qlv23hs9w53c");
+            //_contentfulManagementClient = new ContentfulManagementClient(httpClient, System.Empty, "qlv23hs9w53c");
             //var res = await _contentfulManagementClient.GetEntriesForLocale<SomeData>(null, "en-US", "qlv23hs9w53c");
 
             var builder = new QueryBuilder<QAndA>().Include(2);
@@ -63,7 +63,7 @@ namespace Barebone.TBD.Controllers
 
             var builder1 = new QueryBuilder<SupportPageContentfulModel>().Include(5).LocaleIs(locale:"en-US");
             var fields1 = contentfulClient.GetEntriesByType<SupportPageContentfulModel>("SupportPage", builder1).Result;
-            
+
             var abc = await contentfulClient.GetEntriesByType<SupportPageContentfulModel>("SupportPage");
 
             // IEnumerable<SomeData> contentfulContent = null;
