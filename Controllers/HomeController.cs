@@ -51,8 +51,8 @@ namespace Barebone.TBD.Controllers
             //    //SpaceId = "666",
             //    //UsePreviewApi = false
             //});
-            //_contentfulManagementClient = new ContentfulManagementClient(httpClient, System.Empty, "qlv23hs9w53c");
-            //var res = await _contentfulManagementClient.GetEntriesForLocale<SomeData>(null, "en-US", "qlv23hs9w53c");
+            //_contentfulManagementClient = new ContentfulManagementClient(httpClient, System.Empty, System.Empty);
+            //var res = await _contentfulManagementClient.GetEntriesForLocale<SomeData>(null, "en-US", System.Empty);
 
             var builder = new QueryBuilder<QAndA>().Include(2);
             var fields = sandbox.GetEntriesByType<QAndA>("qandA", builder).Result;
